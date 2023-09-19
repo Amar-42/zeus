@@ -1,0 +1,297 @@
+ 
+        /* Reset some default styles */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a; /* Dark gray background */
+            color: #fff;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: transparent;
+            color: #ff4500; /* Orange text color */
+            text-align: center;
+            padding: 2rem 0;
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+        form {
+          background-color: #1a1a1a;
+          padding: 2rem;
+          border-radius: 10px;
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        label {
+          color: #fff;
+        }
+        input {
+          width: 100%;
+          padding: 10px; 
+          border: none;
+          background-color: #222;
+          color: #ff4500; 
+          border-radius: 5px;
+          margin-bottom: 1rem;
+        }
+        
+        textarea {
+          width: 100%;
+          padding: 10px; 
+          border: none;
+          background-color: #222;
+          color: #ff4500; 
+          border-radius: 5px;
+          margin-bottom: 1rem;
+        }
+        button {
+          background-color: #ff4500;
+          color: #fff;
+          padding: 10px 20px; 
+          border: none; 
+          border-radius: 5px; 
+          font-size: 1.5rem; 
+          cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex-grow: 1;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .portfolio-item {
+            background-color: #222; /* Dark gray portfolio item background */
+            border-radius: 5px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease-in-out;
+            max-width: 400px; 
+            min-height: 100px;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .portfolio-item-content {
+            padding: 1rem;
+            opacity: 1;
+            color: #ff4500;
+        }
+
+        .portfolio-item h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #ff4500; /* Orange text color */
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .portfolio-item p {
+            font-size: 1.5rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Profile photo styles */
+        .profile-photo {
+            max-width: 200px;
+            border-radius: 50%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: transparent;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Skills section styles */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 2rem 0;
+        }
+
+        .skill {
+            width: 48%;
+            padding: 1rem;
+            background-color: #222; /* Dark gray skill background */
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .skill h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #ff4500; /* Orange text color */
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .progress {
+            background-color: rgba(255, 255, 255, 0.3);
+            height: 10px;
+            border-radius: 5px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .progress-bar {
+            background-color: #ff4500; /* Orange progress bar color */
+            height: 10px;
+            border-radius: 5px;
+            width: 80%; /* Adjust this percentage based on your skill level */
+            animation: fillProgress 2s ease-in-out;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            width: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .sidebar-content {
+            padding: 2rem;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #ff4500; /* Orange hover color */
+        }
+
+        .open-sidebar-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 15px;
+            border-radius: 50%;
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fillProgress {
+            from {
+                width: 0;
+            }
+            to {
+                width: 80%;
+            }
+        }
+
+        /* Responsive design adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .portfolio-item {
+                width: 100%;
+            }
+
+            .skills {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .skill {
+                width: 100%;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .open-sidebar-button {
+                display: block;
+            }
+        }
+        /* Floating image styles */
+.floating-image {
+    position: fixed;
+    right: 0;
+    z-index: 9999;
+    transition: transform 2s ease-in-out;
+    animation: floatUpDown 4s ease-in-out infinite alternate;
+}
+
+.floating-image img {
+    width: 100px;
+    height: 100px; /* Adjust the height as needed */
+    border: none;
+}
+
+/* Add a hover effect if desired */
+.floating-image:hover {
+    transform: scale(1.1); /* Increase size on hover */
+}
+
+/* Keyframe animation for floating up and down */
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px); /* Adjust the distance it moves up */
+    }
+}
